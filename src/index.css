@@ -1,13 +1,121 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Globals */
+h1, h2, h3, a, p, button {
+    font-family: "IBM Plex Mono", monospace;
+}
+a {
+    background-image: linear-gradient(transparent 0%, transparent calc(50% - 9px), rgba(0, 255, 0, 0.35) calc(50% - 9px), rgba(0, 255, 0, 0.35) 100%);
+    transition: background-position 120ms ease-in-out 0s, padding 120ms ease-in-out 0s;
+    background-size: 100% 200%;
+    background-position: 0px 0px;
+}
+a:hover {
+    background-image: linear-gradient(transparent 0%, transparent calc(50% - 9px), rgb(0, 255, 0) calc(50% - 9px), rgb(0, 255, 0) 100%);
+    background-position: 0px 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* NAV */
+.nav-search_box {
+    color: #00BB00;
+}
+.nav-search_box::placeholder {
+    color: #00BB00;
+}
+
+/* POST-CONTENT */
+.post-content {
+    width: 100%;
+}
+.post-content .paragraph, .youtube-container, .gist-container, blockquote, h2 {
+    width: 100%;
+    margin-bottom: 20px;
+    overflow-wrap: break-word;
+}
+
+.post-content .code-container {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.post-content .code-container pre {
+    white-space: pre-wrap;
+}
+
+.post-content .youtube-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0px;
+}
+.post-content .youtube-container iframe {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.post-content h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Content link */
+.post-content a {
+    background: linear-gradient(transparent 0%, transparent calc(50% - 9px), rgba(0, 255, 0, 0.35) calc(50% - 9px), rgba(0, 255, 0, 0.35) 100%);
+    transition: background-position 120ms ease-in-out 0s, padding 120ms ease-in-out 0s;
+    background-size: 100% 200%;
+}
+.post-content a:hover {
+    background: linear-gradient(transparent 0%, transparent calc(50% - 9px), rgb(0, 255, 0) calc(50% - 9px), rgb(0, 255, 0) 100%);
+    background-position: 0px 100%;
+}
+.post-content .ad {
+    background: none;
+}
+.post-content .ad:hover {
+    background: none;
+}
+
+.post-content .paragraph {
+    font-size: 20px;
+}
+.post-content blockquote {
+    margin-bottom: 40px;
+    font-size: 25px;
+    text-align: center;
+    font-style: italic;
+}
+
+@media screen and (min-width: 768px){
+    .post-content {
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+    }
+    .post-content .code-container {
+        grid-column: 1 / -1;
+    }
+    .post-content .paragraph, .youtube-container, .gist-container, blockquote, h2 {
+        grid-column: 2 / -2;
+    }
+}
+
+/* CONTENT FOOTER */
+.content_footer .author-info_footer {
+    background: rgb(33, 36, 40);
+    border-style: solid;
+    border-width: 16px;
+    border-image: url(https://hackernoon.com/Devimg/hn-ad-green.png) 16 / 1 / 8px stretch;
+    color: rgb(0, 255, 0);
+}
+.content_footer .author-info_footer img {
+    object-fit: cover;
+    box-shadow: rgb(194 202 214) 0px 0.2em, rgb(194 202 214) 0px -0.2em, rgb(194 202 214) 0.2em 0px, rgb(194 202 214) -0.2em 0px;
+}
+
+/* RELATED */
+.related-card:hover .icon-bookmark{
+    display: block;
 }
