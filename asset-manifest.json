@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/hacker-noon-post-replica/static/css/main.12f2ea01.chunk.css",
+    "main.js": "/hacker-noon-post-replica/static/js/main.292d0351.chunk.js",
+    "main.js.map": "/hacker-noon-post-replica/static/js/main.292d0351.chunk.js.map",
+    "runtime-main.js": "/hacker-noon-post-replica/static/js/runtime-main.be85d833.js",
+    "runtime-main.js.map": "/hacker-noon-post-replica/static/js/runtime-main.be85d833.js.map",
+    "static/js/2.44580662.chunk.js": "/hacker-noon-post-replica/static/js/2.44580662.chunk.js",
+    "static/js/2.44580662.chunk.js.map": "/hacker-noon-post-replica/static/js/2.44580662.chunk.js.map",
+    "index.html": "/hacker-noon-post-replica/index.html",
+    "static/css/main.12f2ea01.chunk.css.map": "/hacker-noon-post-replica/static/css/main.12f2ea01.chunk.css.map",
+    "static/js/2.44580662.chunk.js.LICENSE.txt": "/hacker-noon-post-replica/static/js/2.44580662.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.be85d833.js",
+    "static/js/2.44580662.chunk.js",
+    "static/css/main.12f2ea01.chunk.css",
+    "static/js/main.292d0351.chunk.js"
+  ]
+}
