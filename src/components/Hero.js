@@ -40,14 +40,14 @@ export default function Hero() {
                 <p>{genDate()}<BsBookmark className="inline" /></p>
                 <div className="mb-8 flex items-center text-3xl">
                     <p className="mr-2">{postData.reactions.total}</p>
-                    <FaHeart className="hover:text-red-600" style={{transition: '1s cubic-bezier(0.075, 0.80, 0.165, 1)'}} />
-                    <FaLightbulb className="hover:text-yellow-400" style={{transition: '1s cubic-bezier(0.075, 0.80, 0.165, 1)'}} />
-                    <GiSailboat className="hover:text-yellow-800" style={{transition: '1s cubic-bezier(0.075, 0.80, 0.165, 1)'}} />
-                    <GiCash className="hover:text-yellow-500" style={{transition: '1s cubic-bezier(0.075, 0.80, 0.165, 1)'}} />
+                    <FaHeart className="hover:text-red-600 transition-all duration-500 ease-in-out" />
+                    <FaLightbulb className="hover:text-yellow-400 transition-all duration-500 ease-in-out" />
+                    <GiSailboat className="hover:text-yellow-800 transition-all duration-500 ease-in-out" />
+                    <GiCash className="hover:text-yellow-500 transition-all duration-500 ease-in-out" />
                 </div>
             </div>
-            <img className="object-cover transform hover:scale-105" style={{transition: '1s cubic-bezier(0.075, 0.80, 0.165, 1)'}}
-                src={postData.mainImage} alt="main image" />
+            <img className="object-cover transform hover:scale-105 transition-all duration-500 ease-in-out"
+                src={postData.mainImage} alt="main" />
         </div>
     )
 }

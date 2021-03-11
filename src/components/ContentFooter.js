@@ -9,11 +9,11 @@ export default function ContentFooter() {
     return (
         <div className="content_footer w-full md:w-3/5 mx-auto">
             <div className="w-max my-8 mx-auto flex items-center text-3xl">
-            <p className="mr-2">{postData.reactions.total}</p>
-            <FaHeart className="hover:text-red-600" style={{transition: '1s cubic-bezier(0.075, 0.80, 0.165, 1)'}} />
-            <FaLightbulb className="hover:text-yellow-400" style={{transition: '1s cubic-bezier(0.075, 0.80, 0.165, 1)'}} />
-            <GiSailboat className="hover:text-yellow-800" style={{transition: '1s cubic-bezier(0.075, 0.80, 0.165, 1)'}} />
-            <GiCash className="hover:text-yellow-500" style={{transition: '1s cubic-bezier(0.075, 0.80, 0.165, 1)'}} />
+                <p className="mr-2">{postData.reactions.total}</p>
+                <FaHeart className="hover:text-red-600 transition-all duration-500 ease-in-out" />
+                <FaLightbulb className="hover:text-yellow-400 transition-all duration-500 ease-in-out" />
+                <GiSailboat className="hover:text-yellow-800 transition-all duration-500 ease-in-out" />
+                <GiCash className="hover:text-yellow-500 transition-all duration-500 ease-in-out" />
             </div>
             {/* Share Links - FOOTER */}
             <div className="w-full mt-16 flex justify-end items-center">

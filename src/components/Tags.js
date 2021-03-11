@@ -23,9 +23,8 @@ const Tag = ({value}) => {
     return (
         <div className="m-2">
             <a href={`https://hackernoon.com/tagged/${value}`}>
-            <button className="p-2 text-sm md:text-base text-gray-800 bg-gray-100 hover:bg-green-400"
-                    style={{boxShadow: 'rgb(194 202 214) 0px 0.2em, rgb(194 202 214) 0px -0.2em, rgb(194 202 214) 0.2em 0px, rgb(194 202 214) -0.2em 0px',
-                        transition: '1s cubic-bezier(0.075, 0.80, 0.165, 1)'}}>#{value}</button>
+            <button className="p-2 text-sm md:text-base text-gray-800 bg-gray-100 hover:bg-green-400 transition-all duration-500 ease-in-out"
+                    style={{boxShadow: 'rgb(194 202 214) 0px 0.2em, rgb(194 202 214) 0px -0.2em, rgb(194 202 214) 0.2em 0px, rgb(194 202 214) -0.2em 0px'}}>#{value}</button>
             </a>
         </div>
     )

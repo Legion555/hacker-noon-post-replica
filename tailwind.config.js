@@ -10,6 +10,9 @@ module.exports = {
       color: {
         'hackerGreenLight': '#00FF00',
         'hackerGreenDark': '#00BB00'
+      },
+      transition: {
+        'cubic': '1s cubic-bezier(0.075, 0.80, 0.165, 1)'
       }
     }
   },

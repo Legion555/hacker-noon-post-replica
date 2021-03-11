@@ -1,3 +1,4 @@
+import {ReactDOM} from 'react';
 import postData from '../data/step-by-step-guide-to-create-3-different-types-of-loading-screens-in-react-lu2633nd.json';
 import {Markup}  from 'react-render-markup';
 //icons
@@ -13,7 +14,7 @@ export default function Content() {
             array.forEach(item => {
                 let iFrame = item.firstChild;
                 iFrame.src = `data:text/html;charset=utf-8,
-                <head><base target='_blank' /></head>
+                <head><base target='parent' /></head>
                 <body><script src='https://gist.github.com/${iFrame.id.slice(5)}.js'></script>
                 </body>`;
             })
@@ -22,10 +23,11 @@ export default function Content() {
     }
     parseIframe()
     
+    
     return (
         <div className="post-content">
-            <div className="mb-16 flex justify-between" style={{gridRow: 'span 5 / auto'}}>
-                <div className="w-40 mr-4">
+            <div className="mb-16 flex justify-between md:flex-col" style={{gridRow: 'span 5 / auto'}}>
+                <div className="w-40 pr-4">
                     <a href={`https://hackernoon.com/u/${postData.profile.handle}`}>
                             <img src={postData.profile.avatar} alt="author avatar" width={50} className="mb-2" /></a>
                 </div>

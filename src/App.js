@@ -27,7 +27,7 @@ function App() {
   return (
     <div className={`w-full ${themeStyle}`}>
       <Nav />
-      <div className="w-full lg:w-8/12 mx-auto mt-8 px-2">
+      <div className="w-full md:w-12/12 xl:w-9/12 mx-auto mt-8 px-2">
         <Hero />
         <Content />
         <ContentFooter />

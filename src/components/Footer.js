@@ -63,13 +63,13 @@ export default function Footer() {
 
 const FooterLink = ({url, text, styleVar}) => {
     return (
-        <a href={url} target="_blank" className={`mr-4 text-sm ${styleVar}`}>{text}</a>
+        <a href={url} target="_blank" rel="noreferrer" className={`mr-4 text-sm ${styleVar}`}>{text}</a>
     )
 }
 
 const SocialLink = ({icon}) => {
     const Icon = icon;
     return (
-        <Icon className="mx-1 text-2xl text-green-400 hover:text-green-800" style={{transition: '1s cubic-bezier(0.075, 0.80, 0.165, 1)'}} />
+        <Icon className="mx-1 text-2xl text-green-400 hover:text-green-800 transition-all duration-500 ease-in-out" />
     )
 }

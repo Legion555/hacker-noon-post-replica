@@ -10,7 +10,7 @@ export default function RelatedPosts() {
                 <h1 className="mx-4 text-center text-4xl font-bold">Related</h1>
                 <div className="w-full h-1 bg-gray-400" />
             </div>
-            <div className="w-full flex flex-col md:flex-row">
+            <div className="w-full flex md:justify-center flex-col md:flex-row flex-wrap">
                 <AdCard text={postData.relatedStories[0].text} image={postData.relatedStories[0].image}
                     companyName={postData.relatedStories[0].companyName} link={postData.relatedStories[0].link} />
                 {postData.relatedStories.slice(1).map(story =>
@@ -25,16 +25,16 @@ export default function RelatedPosts() {
 
 const AdCard = ({text, image, companyName, link}) => {
     return (
-        <div className="related-card min-w-full md:min-w-0 md:w-4/12 md:mx-4 my-4 md:my-0 shadow border border-gray-200">
+        <div className="related-card min-w-full md:min-w-0 md:w-5/12 lg:w-4/12 xl:w-3/12 md:mx-2 my-4 xl:my-0 shadow border border-gray-200">
             {/* Title */}
             <div className="h-20 p-2 pt-4 text-xl overflow-hidden">
-                <a href={link}>{text}</a>
+                <a href={link} target="_blank" rel="noreferrer">{text}</a>
             </div>
             {/* Image + reactionCount */}
             <div className="w-full h-52 flex items-center overflow-hidden relative">
-                <a href={link} target="_blank">
-                <img src={image} alt="post image" 
-                    className="w-full object-cover transform hover:scale-105" style={{transition: '1s cubic-bezier(0.075, 0.80, 0.165, 1)'}} />
+                <a href={link} target="_blank" rel="noreferrer">
+                <img src={image} alt="post" 
+                    className="w-full object-cover transform hover:scale-105 transition-all duration-500 ease-in-out" />
                 </a>
             </div>
             {/* Author info */}
@@ -44,7 +44,7 @@ const AdCard = ({text, image, companyName, link}) => {
                     <p>{link}</p>
                 </div>
                 <div className="mr-4 text-right">
-                    <button className="p-2 bg-yellow-400 hover:bg-yellow-600" 
+                    <button className="p-2 bg-yellow-400 hover:bg-yellow-600 transition-all duration-500 ease-in-out" 
                         style={{boxShadow: 'rgb(102 97 5) 0px 0.2em, rgb(102 97 5) 0px -0.2em, rgb(102 97 5) 0.2em 0px, rgb(102 97 5) -0.2em 0px'}}>promoted</button>
                 </div>
             </div>
@@ -65,21 +65,21 @@ const RelatedCard = ({title, reactionsCount, image, avatar, handle, displayName,
     }
 
     return (
-        <div className="related-card min-w-full md:min-w-0 md:w-4/12 md:mx-4 my-4 md:my-0 shadow relative border border-gray-200">
+        <div className="related-card min-w-full md:min-w-0 md:w-5/12 lg:w-4/12 xl:w-3/12 md:mx-2 my-4 xl:my-0 shadow relative border border-gray-200">
             <BsBookmark className="icon-bookmark hidden absolute top-2 right-2 text-2xl text-gray-600" />
             {/* Title */}
             <div className="h-20 p-2 pt-4 text-xl overflow-hidden">
-                <a href={`https://hackernoon.com/${slug}`} target="_blank">{title}</a>
+                <a href={`https://hackernoon.com/${slug}`} target="_blank" rel="noreferrer">{title}</a>
             </div>
             {/* Image + reactionCount */}
             <p className="text-center text-gray-800 bg-gray-200">{reactionsCount} reactions</p>
             <div className="w-full overflow-hidden relative">
-                <a href={`https://hackernoon.com/${slug}`} target="_blank">
-                <img src={image} alt="post image" 
-                    className="w-full h-52 object-cover transform hover:scale-105" style={{transition: '1s cubic-bezier(0.075, 0.80, 0.165, 1)'}} />
+                <a href={`https://hackernoon.com/${slug}`} target="_blank" rel="noreferrer">
+                <img src={image} alt="post" 
+                    className="w-full h-52 object-cover transform hover:scale-105 transition-all duration-500 ease-in-out" />
                 </a>
-                <a href={`https://hackernoon.com/tagged/${tag}`} target="_blank">
-                <button className="p-2 absolute bottom-4 right-8 bg-gray-100 hover:bg-green-400" 
+                <a href={`https://hackernoon.com/tagged/${tag}`} target="_blank" rel="noreferrer">
+                <button className="p-2 absolute bottom-4 right-8 bg-gray-100 hover:bg-green-400 transition-all duration-500 ease-in-out" 
                     style={{boxShadow: 'rgb(194 202 214) 0px 0.2em, rgb(194 202 214) 0px -0.2em, rgb(194 202 214) 0.2em 0px, rgb(194 202 214) -0.2em 0px'}}>#{tag}</button>
                 </a>
             </div>
