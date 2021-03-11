@@ -36,7 +36,7 @@ export default function Hero() {
     }
 
     return (
-        <div className="w-full mb-8 pt-8 md:pt-40">
+        <div className="w-full mb-8 pt-8 md:pt-16">
             {/* Title */}
             <h1 className="mb-4 text-3xl md:text-4xl text-left md:text-center font-bold">{postData.title}</h1>
             {/* Date + Reactions */}
