@@ -1,9 +1,11 @@
+import Container from './Container';
 
 
-export default function TechCompanies() {
+
+export default function TechCompanies({setMenu}) {
     return (
-        <div className="w-10/12 h-max absolute mx-auto p-8 flex justify-center items-center text-gray-100 bg-green-900 z-40" style={{left: '8.333%'}}>
-            <div className="flex items-center">
+        <Container setMenu={setMenu}>
+            <div className="flex flex-col md:flex-row mb-8 md:mb-0">
                 <div className="flex items-center">
                     <h1 className="text-2xl">A to F</h1>
                     <div className="w-4 h-0.5 ml-2 bg-green-400" />
@@ -22,7 +24,7 @@ export default function TechCompanies() {
                     <Navlink link={''} text={'Facebook'} />
                 </div>
             </div>
-            <div className="flex items-center">
+            <div className="flex flex-col md:flex-row mb-8 md:mb-0">
                 <div className="flex items-center">
                     <h1 className="text-2xl">G to N</h1>
                     <div className="w-4 h-0.5 ml-2 bg-green-400" />
@@ -39,7 +41,7 @@ export default function TechCompanies() {
                     <Navlink link={''} text={'Nvidia'} />
                 </div>
             </div>
-            <div className="flex items-center">
+            <div className="flex flex-col md:flex-row mb-8 md:mb-0">
                 <div className="flex items-center">
                     <h1 className="text-2xl">O to Z</h1>
                     <div className="w-4 h-0.5 ml-2 bg-green-400" />
@@ -57,7 +59,7 @@ export default function TechCompanies() {
                     <Navlink link={''} text={'See All 913 Tech Companies'} />
                 </div>
             </div>
-        </div>
+        </Container>
     )
 }
 

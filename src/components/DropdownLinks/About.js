@@ -1,9 +1,11 @@
+import Container from './Container';
 
 
-export default function About() {
+
+export default function About({setMenu}) {
     return (
-        <div className="w-10/12 h-max absolute mx-auto p-8 flex justify-center items-center text-gray-100 bg-green-900 z-40" style={{left: '8.333%'}}>
-            <div className="flex items-center">
+        <Container setMenu={setMenu}>
+            <div className="flex flex-col md:flex-row mb-8 md:mb-0">
                 <div className="flex items-center">
                     <h1 className="text-2xl">About</h1>
                     <div className="w-4 h-0.5 ml-2 bg-green-400" />
@@ -22,7 +24,7 @@ export default function About() {
                     <Navlink link={''} text={'Tech GIFS'} />
                 </div>
             </div>
-            <div className="flex items-center">
+            <div className="flex flex-col md:flex-row mb-8 md:mb-0">
                 <div className="flex items-center">
                     <h1 className="text-2xl">Write</h1>
                     <div className="w-4 h-0.5 ml-2 bg-green-400" />
@@ -40,7 +42,7 @@ export default function About() {
                     <Navlink link={''} text={'Write Now'} />
                 </div>
             </div>
-            <div className="flex items-center">
+            <div className="flex flex-col md:flex-row mb-8 md:mb-0">
                 <div className="flex items-center">
                     <h1 className="text-2xl">Noonies 2020</h1>
                     <div className="w-4 h-0.5 ml-2 bg-green-400" />
@@ -59,7 +61,7 @@ export default function About() {
                     <Navlink link={''} text={'2019 Inaugerial Winners'} />
                 </div>
             </div>
-        </div>
+        </Container>
     )
 }
 

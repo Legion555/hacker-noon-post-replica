@@ -5,14 +5,18 @@ import {BsBookmark} from 'react-icons/bs';
 export default function RelatedPosts() {
     return (
         <div className="w-full my-16">
+            {/* Header */}
             <div className="flex mb-8 items-center ">
                 <div className="w-full h-1 bg-gray-400" />
                 <h1 className="mx-4 text-center text-4xl font-bold">Related</h1>
                 <div className="w-full h-1 bg-gray-400" />
             </div>
+            {/* Posts */}
             <div className="w-full flex md:justify-center flex-col md:flex-row flex-wrap">
+                {/* Ad post */}
                 <AdCard text={postData.relatedStories[0].text} image={postData.relatedStories[0].image}
                     companyName={postData.relatedStories[0].companyName} link={postData.relatedStories[0].link} />
+                {/* Related posts */}
                 {postData.relatedStories.slice(1).map(story =>
                     <RelatedCard key={story.id} title={story.title} reactionsCount={story.reactionsCount} image={story.mainImage}
                         avatar={story.profile.avatar} handle={story.profile.handle} displayName={story.profile.displayName}
@@ -27,7 +31,7 @@ const AdCard = ({text, image, companyName, link}) => {
     return (
         <div className="related-card min-w-full md:min-w-0 md:w-5/12 lg:w-4/12 xl:w-3/12 md:mx-2 my-4 xl:my-0 shadow border border-gray-200">
             {/* Title */}
-            <div className="h-20 p-2 pt-4 text-xl overflow-hidden">
+            <div className="h-20 p-2 pt-4 md:text-xl font-bold overflow-hidden">
                 <a href={link} target="_blank" rel="noreferrer">{text}</a>
             </div>
             {/* Image + reactionCount */}
@@ -68,7 +72,7 @@ const RelatedCard = ({title, reactionsCount, image, avatar, handle, displayName,
         <div className="related-card min-w-full md:min-w-0 md:w-5/12 lg:w-4/12 xl:w-3/12 md:mx-2 my-4 xl:my-0 shadow relative border border-gray-200">
             <BsBookmark className="icon-bookmark hidden absolute top-2 right-2 text-2xl text-gray-600" />
             {/* Title */}
-            <div className="h-20 p-2 pt-4 text-xl overflow-hidden">
+            <div className="h-20 p-2 pt-4 md:text-xl font-bold overflow-hidden">
                 <a href={`https://hackernoon.com/${slug}`} target="_blank" rel="noreferrer">{title}</a>
             </div>
             {/* Image + reactionCount */}

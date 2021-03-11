@@ -4,6 +4,8 @@ import {BsBookmark} from 'react-icons/bs';
 import {FaHeart, FaLightbulb} from 'react-icons/fa';
 import {GiSailboat, GiCash} from 'react-icons/gi';
 
+
+
 export default function Hero() {
     
     const genDate = () => {
@@ -34,8 +36,10 @@ export default function Hero() {
     }
 
     return (
-        <div className="w-full mb-8 pt-40">
+        <div className="w-full mb-8 pt-8 md:pt-40">
+            {/* Title */}
             <h1 className="mb-4 text-3xl md:text-4xl text-left md:text-center font-bold">{postData.title}</h1>
+            {/* Date + Reactions */}
             <div className="flex justify-between items-center">
                 <p>{genDate()}<BsBookmark className="inline" /></p>
                 <div className="mb-8 flex items-center text-3xl">
@@ -46,6 +50,7 @@ export default function Hero() {
                     <GiCash className="hover:text-yellow-500 transition-all duration-500 ease-in-out" />
                 </div>
             </div>
+            {/* Main Image */}
             <img className="object-cover transform hover:scale-105 transition-all duration-500 ease-in-out"
                 src={postData.mainImage} alt="main" />
         </div>

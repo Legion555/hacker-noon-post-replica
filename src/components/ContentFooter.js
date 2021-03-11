@@ -8,6 +8,7 @@ import {GiSailboat, GiCash} from 'react-icons/gi';
 export default function ContentFooter() {
     return (
         <div className="content_footer w-full md:w-3/5 mx-auto">
+            {/* Reactions */}
             <div className="w-max my-8 mx-auto flex items-center text-3xl">
                 <p className="mr-2">{postData.reactions.total}</p>
                 <FaHeart className="hover:text-red-600 transition-all duration-500 ease-in-out" />
@@ -15,7 +16,7 @@ export default function ContentFooter() {
                 <GiSailboat className="hover:text-yellow-800 transition-all duration-500 ease-in-out" />
                 <GiCash className="hover:text-yellow-500 transition-all duration-500 ease-in-out" />
             </div>
-            {/* Share Links - FOOTER */}
+            {/* Share Links */}
             <div className="w-full mt-16 flex justify-end items-center">
                 <p>Share this story</p>
                 <AiOutlineTwitter className="text-2xl text-green-600" />
@@ -23,7 +24,7 @@ export default function ContentFooter() {
                 <FaLinkedinIn className="text-2xl text-green-600" />
                 <CgMail className="text-2xl text-green-600" />
             </div>
-            {/* Author info - FOOTER */}
+            {/* Author info */}
             <div className="author-info_footer w-full mt-4 flex justify-between">
                 <div>
                     <a href={`https://hackernoon.com/u/${postData.profile.handle}`}>
